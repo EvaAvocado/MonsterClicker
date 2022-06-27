@@ -1,4 +1,5 @@
 ﻿using System;
+using Data;
 using UIComponents;
 using UnityEngine;
 using UnityEngine.Events;
@@ -16,15 +17,19 @@ namespace Components
         [SerializeField] private HealthChange _onChange;
 
         private int _maxHealth;
-        private Score _score;
+        
+        private ScoreComponent _score;
+        private GameData _data;
 
         private void Awake()
         {
-            _score = FindObjectOfType<Score>();
+            _score = FindObjectOfType<ScoreComponent>();
+            _data = FindObjectOfType<GameData>();
         }
 
         private void Start()
         {
+            _health += (int) _data.DeltaHealth;
             _maxHealth = _health;
             UpdateHealthBar();
         }
@@ -41,6 +46,7 @@ namespace Components
             {
                 _onDie?.Invoke();
                 _score.ChangeScore(1);
+                _data.CurrentMonsters--;
             }
         }
 

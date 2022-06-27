@@ -4,14 +4,14 @@ using UnityEngine.Events;
 
 namespace Components
 {
-    public class RandomTimeBusterComponent : MonoBehaviour
+    public class RandomBusterComponent : MonoBehaviour
     {
         [SerializeField] private int _randStart;
         [SerializeField] private int _randEnd;
-        [SerializeField] private int _randTrue;
+        [SerializeField] private int _randTruePercent;
         [SerializeField] private UnityEvent _action;
 
-        [SerializeField] private GameData _data;
+        private GameData _data;
 
         private void Awake()
         {
@@ -20,7 +20,8 @@ namespace Components
         
         public void RandomAction()
         {
-            if (_randTrue <= Random.Range(_randStart, _randEnd) && !_data.IsBust)
+            var i = Random.Range(_randStart, _randEnd);
+            if (_randTruePercent >= i && !_data.IsBust)
             {
                 _action?.Invoke();
             }

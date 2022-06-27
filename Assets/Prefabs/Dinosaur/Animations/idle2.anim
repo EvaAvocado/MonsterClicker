@@ -2045,7 +2045,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: _stopMove
+    attribute: _stopMoveInAnimation
     path: 
     classID: 114
     script: {fileID: 11500000, guid: 0149e5ee9a11e7142b3f36907122a8e8, type: 3}
@@ -2227,7 +2227,7 @@ AnimationClip:
       isPPtrCurve: 0
     - serializedVersion: 2
       path: 0
-      attribute: 522379864
+      attribute: 418437147
       script: {fileID: 11500000, guid: 0149e5ee9a11e7142b3f36907122a8e8, type: 3}
       typeID: 114
       customType: 0
@@ -3232,34 +3232,6 @@ AnimationClip:
     path: Bones/Root_jnt/Spine_null/Spine_00_jnt
     classID: 4
     script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1.4
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: _stopMove
-    path: 
-    classID: 114
-    script: {fileID: 11500000, guid: 0149e5ee9a11e7142b3f36907122a8e8, type: 3}
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -10260,6 +10232,34 @@ AnimationClip:
     path: Bones/Root_jnt/Spine_null/Spine_00_jnt/Tail/Tail_00_jnt/Tail_01_jnt/Tail_02_jnt
     classID: 4
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1.4
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: _stopMoveInAnimation
+    path: 
+    classID: 114
+    script: {fileID: 11500000, guid: 0149e5ee9a11e7142b3f36907122a8e8, type: 3}
   m_EulerEditorCurves:
   - curve:
       serializedVersion: 2

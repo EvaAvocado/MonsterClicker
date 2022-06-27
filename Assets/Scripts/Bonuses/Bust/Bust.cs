@@ -7,9 +7,9 @@ namespace Bonuses
     public class Bust : MonoBehaviour
     {
         [SerializeField] private Text _text;
-        protected float duration;
+        [SerializeField] protected float duration;
         
-        [SerializeField] private GameData _data;
+        private GameData _data;
         
         protected virtual void Start()
         {

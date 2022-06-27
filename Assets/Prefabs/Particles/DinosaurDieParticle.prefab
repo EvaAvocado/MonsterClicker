@@ -30,10 +30,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
-  m_Children: []
+  m_Children:
+  - {fileID: 8144047507654584834}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &6666249919419381786
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4890,9 +4891,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _time: 1
+  _timeToStart: 0
+  _isRandom: 0
   _action:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 5642466918202089348}
+        m_TargetAssemblyTypeName: Components.RandomBusterComponent, Assembly-CSharp
+        m_MethodName: RandomAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1159039723474755662}
         m_TargetAssemblyTypeName: Components.DestroyObjectComponent, Assembly-CSharp
         m_MethodName: DestroyObject
@@ -4905,3 +4920,76 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1001 &6928397277289400363
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6484285820112932689}
+    m_Modifications:
+    - target: {fileID: 1235082041368142377, guid: 99f81a72d9f15bf44aaffa39066b8d41, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235082041368142377, guid: 99f81a72d9f15bf44aaffa39066b8d41, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235082041368142377, guid: 99f81a72d9f15bf44aaffa39066b8d41, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235082041368142377, guid: 99f81a72d9f15bf44aaffa39066b8d41, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235082041368142377, guid: 99f81a72d9f15bf44aaffa39066b8d41, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235082041368142377, guid: 99f81a72d9f15bf44aaffa39066b8d41, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235082041368142377, guid: 99f81a72d9f15bf44aaffa39066b8d41, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235082041368142377, guid: 99f81a72d9f15bf44aaffa39066b8d41, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235082041368142377, guid: 99f81a72d9f15bf44aaffa39066b8d41, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235082041368142377, guid: 99f81a72d9f15bf44aaffa39066b8d41, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235082041368142377, guid: 99f81a72d9f15bf44aaffa39066b8d41, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7513454927493225976, guid: 99f81a72d9f15bf44aaffa39066b8d41, type: 3}
+      propertyPath: m_Name
+      value: BustersSpawner
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 99f81a72d9f15bf44aaffa39066b8d41, type: 3}
+--- !u!4 &8144047507654584834 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1235082041368142377, guid: 99f81a72d9f15bf44aaffa39066b8d41, type: 3}
+  m_PrefabInstance: {fileID: 6928397277289400363}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5642466918202089348 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3344078140267452335, guid: 99f81a72d9f15bf44aaffa39066b8d41, type: 3}
+  m_PrefabInstance: {fileID: 6928397277289400363}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad130bbfa8214b3e9077c495e67bd38c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

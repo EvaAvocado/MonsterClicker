@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3856729412846681251}
   - component: {fileID: 3856729412846681253}
   - component: {fileID: 3856729412846681252}
-  - component: {fileID: 3856729412846681254}
+  - component: {fileID: 8481633404241390409}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -68,7 +68,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 3361ded5b9191b247810191cccb9f98a, type: 3}
-    m_FontSize: 56
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -80,7 +80,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Score: 0'
---- !u!114 &3856729412846681254
+--- !u!114 &8481633404241390409
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3856729412846681250}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b190bd94bd7c2034bb0f34a3935d6734, type: 3}
+  m_Script: {fileID: 11500000, guid: 16bfd4b7e61d32449af6f4bf22e8438a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 3856729412846681252}

@@ -10,6 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1235082041368142377}
   - component: {fileID: 7568790561511306670}
+  - component: {fileID: 2311507995822798079}
+  - component: {fileID: 3344078140267452335}
+  - component: {fileID: 5971011695593604328}
+  - component: {fileID: 7560476337550958087}
+  - component: {fileID: 7736997270392790979}
+  - component: {fileID: 8069834486586223356}
   m_Layer: 0
   m_Name: BustersSpawner
   m_TagString: Untagged
@@ -26,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 7513454927493225976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -44,5 +50,179 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 1235082041368142377}
-  _prefab: {fileID: 7829440596164181416, guid: 60146277575811d46a266ee2b326efde, type: 3}
+  _prefab: {fileID: 0}
   _coorinateY: 0
+--- !u!114 &2311507995822798079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7513454927493225976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6321a2c82446209b20db4d7362f4be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7568790561511306670}
+        m_TargetAssemblyTypeName: Components.SpawnComponent, Assembly-CSharp
+        m_MethodName: SpawnGameObject
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3344078140267452335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7513454927493225976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad130bbfa8214b3e9077c495e67bd38c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _randStart: 0
+  _randEnd: 100
+  _randTruePercent: 10
+  _action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2311507995822798079}
+        m_TargetAssemblyTypeName: Components.ChooseRandomBusterComponent, Assembly-CSharp
+        m_MethodName: ChooseRandomBuster
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5971011695593604328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7513454927493225976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5a70babf1a44f3bde6d3be92e912ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _time: 1
+  _timeToStart: 0
+  _isRandom: 0
+  _action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3344078140267452335}
+        m_TargetAssemblyTypeName: Components.RandomTimeBusterComponent, Assembly-CSharp
+        m_MethodName: RandomAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7560476337550958087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7513454927493225976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5a70babf1a44f3bde6d3be92e912ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _time: 1
+  _timeToStart: 0
+  _isRandom: 0
+  _action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7736997270392790979}
+        m_TargetAssemblyTypeName: Components.RandomTimeBusterComponent, Assembly-CSharp
+        m_MethodName: RandomAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7736997270392790979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7513454927493225976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad130bbfa8214b3e9077c495e67bd38c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _randStart: 0
+  _randEnd: 100
+  _randTruePercent: 20
+  _action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8069834486586223356}
+        m_TargetAssemblyTypeName: Components.ChooseRandomBusterComponent, Assembly-CSharp
+        m_MethodName: ChooseRandomBuster
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8069834486586223356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7513454927493225976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6321a2c82446209b20db4d7362f4be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7568790561511306670}
+        m_TargetAssemblyTypeName: Components.SpawnComponent, Assembly-CSharp
+        m_MethodName: SpawnGameObject
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

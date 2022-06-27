@@ -5,15 +5,13 @@ namespace Creatures
 {
     public class Spider : Monster
     {
-
         protected override void Awake()
         {
             speed = 5;
 
             base.Awake();
         }
-        
-        
+
         public override void TurnBack()
         {
             base.TurnBack();

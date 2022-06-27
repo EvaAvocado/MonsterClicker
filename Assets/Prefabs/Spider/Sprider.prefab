@@ -1912,7 +1912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0dbc9df511f4785af8d56413dac1c7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 10
+  _health: 5
   _healthBar: {fileID: 187684363}
   _onDamage:
     m_PersistentCalls:
@@ -2031,6 +2031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d24ab79360734074928df54225793976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopMove: 0
   speed: 5
   _clickerAction:
     m_PersistentCalls:
@@ -2061,6 +2062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 7263931287676595229}
   _prefab: {fileID: 359397353589068324, guid: 92b0ff9932fb6d347b2707a9f3ac62b4, type: 3}
+  _coorinateY: 0
 --- !u!1 &9073183668388956107
 GameObject:
   m_ObjectHideFlags: 0

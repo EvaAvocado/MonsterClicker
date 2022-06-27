@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Data;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace Components
@@ -9,10 +10,13 @@ namespace Components
         [SerializeField] private float _timeToStart;
         [SerializeField] private bool _isRandom;
         [SerializeField] private UnityEvent _action;
+        
         private float _timeBeforeApplyAction;
+        private GameData _data;
 
         private void Awake()
         {
+            _data = FindObjectOfType<GameData>();
             CheckRandom();
             _timeBeforeApplyAction = _time;
         }
@@ -42,9 +46,12 @@ namespace Components
 
         private void CheckRandom()
         {
+            var firstRand = Random.Range(2, 5);
+            var secondRand = Random.Range(5, 10);
+            
             if (_isRandom)
             {
-                _time = Random.Range(3, _time);
+                _time = Random.Range((firstRand - _data.DeltaTimeSpawn) < 0 ? 0 : firstRand ,  (secondRand - _data.DeltaTimeSpawn) < 1 ? 1 : secondRand);
             }
         }
     }
