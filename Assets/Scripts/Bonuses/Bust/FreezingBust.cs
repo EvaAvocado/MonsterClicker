@@ -12,11 +12,13 @@ namespace Bonuses
         private GameObject[] _monsters;
         private GameObject[] _spawners;
         private GameObject _camera;
+        private Terrain _terrain;
 
         private void Awake()
         {
             duration = 5;
             _camera = GameObject.FindGameObjectWithTag("MainCamera");
+            _terrain = FindObjectOfType<Terrain>();
         }
 
         protected override void BusterAction()
@@ -25,6 +27,7 @@ namespace Bonuses
             _spawners = GameObject.FindGameObjectsWithTag("Spawner");
 
             _camera.GetComponent<PostProcessLayer>().enabled = true;
+            _terrain.terrainData.wavingGrassStrength = 0;
 
             foreach (var monster in _monsters)
             {
@@ -46,6 +49,7 @@ namespace Bonuses
         protected override void EndAction()
         {
             _camera.GetComponent<PostProcessLayer>().enabled = false;
+            _terrain.terrainData.wavingGrassStrength = 0.5f;
 
             foreach (var monster in _monsters)
             {

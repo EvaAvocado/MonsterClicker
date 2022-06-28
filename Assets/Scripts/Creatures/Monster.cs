@@ -10,6 +10,8 @@ namespace Creatures
     {
         [SerializeField] protected float speed;
         [SerializeField] private bool _stopMoveInAnimation;
+        
+        [Header("Events")]
         [SerializeField] private UnityEvent _clickerAction;
 
         protected Quaternion rotationEnd;
