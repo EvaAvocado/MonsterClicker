@@ -1,4 +1,5 @@
-﻿using Data;
+﻿using System;
+using Data;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +11,7 @@ namespace Bonuses
         [SerializeField] protected float duration;
         
         private GameData _data;
-        
+
         protected virtual void Start()
         {
             _data = FindObjectOfType<GameData>();

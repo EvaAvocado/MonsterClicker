@@ -8,7 +8,7 @@ namespace Bonuses
         private GameObject[] _spawners;
         private void Awake()
         {
-            duration = 5;
+            duration = 3;
             _spawners = GameObject.FindGameObjectsWithTag("Spawner");
         }
         
